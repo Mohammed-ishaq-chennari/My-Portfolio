@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Ishaq Chennari - Fullstack Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <div class="containerr">
+    <header class="header-container">
+      <div class="logo">
+        welcome!!
+      </div>
+      <div class="menu-active">
+        <nav class="navbar">
+          <div class="nav-item"><a href="/index.html">Home</a></div>
+          <div class="nav-item"><a href="/Intro.html">Intro</a></div>
+          <div class="nav-item"><a href="/work.html">Work</a></div>
+          <div class="nav-item"><a href="/Blog.html">Blog</a></div>
+          <div class="nav-item"><a class="cnt" href="/Contact.html">Contact</a></div>
+         
+        </nav>
+        <div class="user-options">
+          <div class="option"><i class="fa fa-moon"></i></div>
+          <div class="option"><i class="fa fa-user"></i></div>
+          <div class="option"><i class="fa fa-gear"></i></div>
+        </div>
+      </div>
+      <nav class="navbar">
+        <div class="nav-item"><a href="/index.html">Home</a></div>
+          <div class="nav-item"><a href="/Intro.html">Intro</a></div>
+          <div class="nav-item"><a href="/work.html">Work</a></div>
+          <div class="nav-item"><a href="/Blog.html">Blog</a></div>
+          <div class="nav-item"><a  href="/Contact.html">Contact</a></div>
+      </nav>
+      <div class="user-options">
+        <div class="option"><i class="fa fa-moon"></i></div>
+        <div class="option"><i class="fa fa-user"></i></div>
+        <div class="option"><i class="fa fa-gear"></i></div>
+      </div>
+      <div class="menu" onclick="activeMenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+    </header>
+    
+    <hr>
+    <div class="container">
+
+ 
+    <div class="sidebar sidebargo">
+        
+        <nav>
+            <ul>
+                <li><a href="/">Home</a> </li>
+                <li> <a href="/Intro.html">Intro</a></li>
+                <li><a href="/work.html"> Work</a> </li>
+                <li><a href="/Blog.html">Blog</a></li>
+                <li><a href="/Contact.html">Contact </a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main">
+        <div class="hamburger">
+            <img class="ham" src="ham.webp" alt="ham">
+            <img class="cross" src="xross.jpeg" alt="cross">
+          </div>
+
+  <!-- code here -->
+ 
+
+  <h1>Wanna know More About Me'........"?  </h1>
+
+<div class="js-angle-slider">
+
+  <div class="js-angle-slider__pager">
+    <button class="js-angle-slider__prev" type="button">
+      Prev
+    </button>
+    <button class="js-angle-slider__next" type="button">
+      Next
+    </button>
+  </div>
+ 
+  <div class="js-angle-slider__body">
+    
+    <div class="js-angle-slider__list" data-slide-angle="12" data-show="7" data-speed="400" data-drag-speed-ratio="0.1" data-dots="true">
+      <div class="js-angle-slider__item"> <h2>My school</h2> <img src="rshs.jpg"  alt=""  style="height: 220px;  width: 180px; border-radius: 9px;  border: 2.5px rgb(5, 5, 5);" width="300" height="400"> <p></p> </div>
+      <div class="js-angle-slider__item"> <h2>Inter College</h2> <img src="stmarys.jpg" style="height: 220px; width: 190px; border-radius: 9px;  border: 2.5px rgb(5, 5, 5);"  alt="" width="300" height="400"></div>
+      <div class="js-angle-slider__item"> <h2>Deg  College</h2> <img src="stjoseph.jpeg" style="height: 220px; width: 190px; border-radius: 9px;  border: 2.5px rgb(5, 5, 5);"  alt="" width="300" height="400"></div>
+      <div class="js-angle-slider__item"><h2>IT Institute</h2> <img src="ath1.jpg" style="height: 220px; width: 190px; border-radius: 9px;  border: 2.5px rgb(5, 5, 5);"  alt="" width="300" height="400"></div>
+      <div class="js-angle-slider__item"> <h3>Convocation.. Pic</h3><img src="20.jpg" alt="" style="height: 220px; width: 190px; border-radius: 9px; border: 2.5px rgb(5, 5, 5);"  width="300" height="400"></div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
+<script src="script.js"></script>
+
+
+<script>
+ 
+const angleSlider = () => {
+
+	const angleSliders = document.querySelectorAll('.js-angle-slider');
+	if(angleSliders.length === 0) {
+		return;
+	}
+
+	angleSliders.forEach((angleSlider,sliderIndex) => {
+		
+		const slider = angleSlider.querySelector('.js-angle-slider__list');
+		const sliderBody = angleSlider.querySelector('.js-angle-slider__body');
+		if(!slider || !slider) {
+			return;
+		}
+
+	
+		let sliderId = slider.getAttribute('id');
+		if(!sliderId) {
+			slider.setAttribute('id','circle-slider-' + ( sliderIndex + 1));
+			sliderId = slider.getAttribute('id');
+		}
+		slider.setAttribute('role', 'tabpanel');
+		slider.setAttribute('aria-label', 'Carousel preview');
+
+		let showLen = slider.dataset.show ? Number(slider.dataset.show) : 7;
+		showLen *= 2;
+
+	
+		const children = slider.children;
+
+
+		let cloneListBefore = [];
+		let cloneListAfter = [];
+		let baseChildren = '';
+
+		for (let i = 0; i < children.length; i++) {
+			children[i].setAttribute('role', 'tabpanel');
+			children[i].setAttribute('aria-roledescription', 'slide');
+			children[i].ariaHidden = true;
+			children[i].dataset.index = i;
+		}
+
+		for (let i = 0; i < children.length; i++) {
+		
+			const cloneBefore = children[i].cloneNode(true);
+			cloneBefore.classList.add('is-clone','is-before');
+			cloneListBefore.push(cloneBefore.outerHTML);
+
+		
+			const cloneAfter = children[i].cloneNode(true);
+			cloneAfter.classList.add('is-clone','is-after');
+			cloneListAfter.push(cloneAfter.outerHTML);
+
+		
+			children[i].classList.add('is-base');
+			if(i === 0) {
+				children[i].classList.add('is-active');
+			}
+			children[i].ariaHidden = false;
+
+			baseChildren += children[i].outerHTML;
+		}
+
+	
+		let slideList = [...cloneListBefore, baseChildren, ...cloneListAfter];
+		
+		while (slideList.length < showLen) {
+			slideList = [...cloneListBefore, ...slideList, ...cloneListAfter];
+		}
+
+
+		slider.innerHTML = '';
+		for (let i = 0; i < slideList.length; i++) {
+			slider.insertAdjacentHTML('beforeend',slideList[i]);
+		}
+
+
+	
+		const baseAngle = slider.dataset.slideAngle ? Number(slider.dataset.slideAngle) : 12;
+
+			const items = slider.children;
+		const beforeItems = [];
+		const baseItems = [];
+		const baseAfterItems = [];
+		const afterItems = [];
+		for( let i = 0 ; i < items.length ; i ++ ) {
+			const item = items[i];
+			if(item.classList.contains('is-before')) {
+				beforeItems.push(item);
+				continue;
+			}
+			if(item.classList.contains('is-base')) {
+				baseItems.push(item);
+				baseAfterItems.push(item);
+				continue;
+			}
+			if(item.classList.contains('is-after')) {
+				baseAfterItems.push(item);
+				afterItems.push(item);
+				continue;
+			}
+		}
+
+		const baseLen = baseItems.length;
+		const beforeLen = beforeItems.length;
+		const itemsLen = items.length;
+
+
+		
+		let isDots = slider.dataset.dots;
+		if(isDots !== 'true') {
+			isDots = false;
+		}
+		
+		const dotsList = [];
+
+
+	
+		let winWidth,winWidthHalf,itemWidth,itemWidthHalf,itemHeight;
+		const getBaseVal = () => {
+			const baseItem = angleSlider.querySelector('.js-angle-slider__item.is-active');
+			itemHeight = baseItem.getBoundingClientRect().height;
+			itemWidth = baseItem.getBoundingClientRect().width;
+			itemWidthHalf = itemWidth / 2;
+			winWidth = window.innerWidth;
+			winWidthHalf = winWidth / 2;
+		}
+		getBaseVal();
+
+
+		const getPosition = (angle) => {
+		
+			const angleLength = Math.abs(angle) / baseAngle + 1;
+		
+			let x = winWidthHalf - itemWidthHalf;
+			let y = 0;
+
+		
+			const isPositive = angle >= 0;
+
+			
+			for (let i = 1; i < angleLength; i++) {
+				const thisAngle = baseAngle * i;
+			
+				const beforeAngle = thisAngle - baseAngle;
+
+			
+				const radian = thisAngle * Math.PI / 180;
+				const BeforeRadian = beforeAngle * Math.PI / 180;
+
+				const tiltHeight = itemWidthHalf * Math.sin(radian);
+				const BeforeTiltHeight = itemWidthHalf * Math.sin(BeforeRadian);
+				y += tiltHeight + BeforeTiltHeight;
+
+			
+				const distance = itemWidthHalf - (itemWidthHalf * Math.cos(radian));
+				const BeforeDistance = itemWidthHalf - (itemWidthHalf * Math.cos(BeforeRadian));
+				const setX = itemWidth - distance - BeforeDistance;
+
+				if(isPositive) {
+					x += setX;
+				} else {
+					x -= setX;
+				}
+			}
+
+			return {
+				x: x,
+				y: y
+			}
+		}
+
+
+		const norm = (v, a, b) => {
+			
+			return (v - a) / (b - a);
+		}
+
+	
+		const lerp = (a, b, t) => {
+
+			return a + (b - a) * t;
+		}
+
+		
+		const setPosition = (elm,angle) => {
+			const checkAngle = angle/baseAngle;
+			let x,y;
+			if(Number.isInteger(checkAngle)) { 
+				const position = getPosition(angle);
+				x = position.x;
+				y = position.y;
+
+			} else { 
+				
+				const beforeAngle = baseAngle * Math.floor(checkAngle);
+				const afterAngle = baseAngle * Math.ceil(checkAngle);
+				const beforePosition = getPosition(beforeAngle);
+				const afterPosition = getPosition(afterAngle);
+
+			
+				const ratio = norm(angle, beforeAngle, afterAngle);
+
+				x = lerp(beforePosition.x, afterPosition.x, ratio);
+				y = lerp(beforePosition.y, afterPosition.y, ratio);
+			}
+
+		
+			elm.angle = angle;
+			elm.x = x;
+			
+			elm.style.transform = 'translateX(' + x + 'px) translateY(' + y + 'px) rotate(' + angle + 'deg)';
+		}
+
+	
+		slider.classList.add('is-initialized');
+
+		const resetItems = () => {
+			for( let i = 0 ; i < beforeLen ; i ++ ) {
+				
+				const setAngle = (baseAngle * i) - (baseAngle * beforeLen);
+				setPosition(beforeItems[i], setAngle);
+			}
+
+			for( let i = 0 ; i < baseAfterItems.length ; i ++ ) {
+				const setAngle = baseAngle * i;
+				setPosition(baseAfterItems[i], setAngle);
+			}
+		}
+		resetItems();
+
+		
+		const setSliderHeight = () => {
+		
+			const showSlideLen = Math.ceil(winWidth/itemWidth);
+
+	
+			const screenEdgeAngle = (showSlideLen / 2) * baseAngle;
+			const screenEdgePosi = getPosition(screenEdgeAngle);
+
+			const radian = screenEdgeAngle * Math.PI / 180;
+			const tiltHeight = itemWidthHalf * Math.sin(radian);
+			slider.style.minHeight = itemHeight + 'px';
+			sliderBody.style.minHeight = (itemHeight + screenEdgePosi.y + tiltHeight) + 'px';
+		}
+		setSliderHeight();
+
+
+	
+		const resetPointBefore = beforeItems[beforeLen - baseLen];
+		const resetPointAfter = afterItems[0];
+		const checkResetPosition = () => {
+		
+			if(resetPointBefore.angle >= 0 || resetPointAfter.angle <= 0) {
+				resetItems();
+			}
+		}
+
+
+		const changeActiveDots = (index) => {
+			for (let i = 0; i < baseLen; i++) {
+				if(i === index) {
+					dotsList[i].classList.add('is-active');
+				} else {
+					dotsList[i].classList.remove('is-active');
+				}
+			}
+		}
+		const changeActiveClass = () => {
+			for( let i = 0 ; i < itemsLen ; i ++ ) {
+				const elm = items[i];
+				if(elm.angle === 0) {
+					elm.classList.add('is-active');
+					changeActiveDots(Number(elm.dataset.index));
+				} else {
+					elm.classList.remove('is-active');
+				}
+			}
+		}
+
+
+	
+		const setWillChange = () => {
+			for(let i = 0; i < itemsLen; i ++ ) {
+				items[i].style.willChange = 'transform';
+			}
+		}
+		const removeWillChange = () => {
+			for(let i = 0; i < itemsLen; i ++ ) {
+				items[i].style.willChange = '';
+			}
+		}
+
+		
+		const easing = (t, b, c, d) => {
+			
+			return -c * ((t=t/d-1)*t*t*t - 1) + b;
+		}
+		
+		const animeSpeed = slider.dataset.speed ? Number(slider.dataset.speed) : 300;
+
+	
+		let isBusy = false;
+
+		
+		const moveAnime = (elm,changeAmount,isLast) => {
+			const startAngle = elm.angle;
+
+			const start = new Date();
+			const move = () => {
+				
+				let elapsedTime = new Date() - start;
+
+			
+				if (elapsedTime > animeSpeed) {
+
+					
+					setPosition(elm, Math.round(elm.angle));
+
+					if(isLast) {
+						
+						checkResetPosition();
+
+						isBusy = false;
+
+						changeActiveClass();
+
+						removeWillChange();
+
+					
+
+
+					}
+					return;
+				}
+
+				const moveAngle = easing(elapsedTime, startAngle, changeAmount, animeSpeed);
+				setPosition(elm, moveAngle);
+
+				elm.requestID = requestAnimationFrame(move);
+			}
+
+			setWillChange();
+			elm.requestID = requestAnimationFrame(move);
+		}
+
+		
+		const navMove = (moveAngle) => {
+			
+			if(isBusy) {
+				return;
+			}
+			isBusy = true;
+
+			const lastIndex = itemsLen - 1;
+			for( let i = 0; i < itemsLen; i ++ ) {
+				moveAnime(items[i], moveAngle, i === lastIndex);
+			}
+		};
+
+		const next = angleSlider.querySelector('.js-angle-slider__next');
+		if(next) {
+			next.setAttribute('aria-controls',sliderId);
+			next.addEventListener('click', () => {
+				navMove(-baseAngle);
+			});
+		}
+		const prev = angleSlider.querySelector('.js-angle-slider__prev');
+		if(prev) {
+			prev.setAttribute('aria-controls',sliderId);
+			prev.addEventListener('click', () => {
+				navMove(baseAngle);
+			});
+		}
+
+
+		const dotsInitialize = () => {
+			if(!isDots) {
+				return
+			}
+
+			const ul = document.createElement('ul');
+			ul.className = 'js-angle-slider__dots-list';
+			ul.setAttribute('role', 'tablist');
+			ul.setAttribute('aria-label', 'Select a slide to show');
+
+			const listItems = [];
+			for (let i = 0; i < baseLen; i++) {
+				const li = document.createElement('li');
+				li.className = 'js-angle-slider__dots-item';
+				li.setAttribute('role', 'presentation');
+
+				const button = document.createElement('button');
+				button.className = 'js-angle-slider__dots-button';
+				if(i === 0) {
+					button.className += ' is-active';
+				}
+
+				button.setAttribute('type','button');
+				button.setAttribute('data-index',i);
+
+				button.setAttribute('aria-label','Go to slide '+(i + 1));
+				button.setAttribute('aria-controls',sliderId);
+				button.setAttribute('role', 'tab');
+				dotsList.push(button);
+
+				li.append(button);
+				listItems.push(li);
+			}
+			ul.append(...listItems);
+
+	
+			let appendArea = angleSlider.querySelector('.js-angle-slider__dots');
+			if(!appendArea) {
+				appendArea = document.createElement('div');
+				appendArea.className = 'js-angle-slider__dots';
+				sliderBody.append(appendArea);
+			}
+			appendArea.append(ul);
+
+
+			for (let i = 0; i < baseLen; i++) {
+				const button = dotsList[i];
+				button.addEventListener('click', ()=> {
+					if(button.classList.contains('is-active')) {
+						return;
+					}
+					changeActiveDots();
+					const target = baseItems[Number(button.dataset.index)];
+					navMove(-target.angle);
+				});
+			}
+		}
+		dotsInitialize();
+
+
+		for(let i = 0; i < itemsLen; i ++ ) {
+			const elm = items[i];
+			elm.addEventListener('click', ()=> {
+				if(!elm.classList.contains('is-active')) {
+					navMove(-elm.angle);
+				}
+			});
+		}
+
+
+	
+		let isDown = false;
+	
+		let startX;
+	
+		let moveX;
+		
+		let beforeX;
+
+	
+		let isRightMove = false;
+
+		const dragSpeedRatio = slider.dataset.dragSpeedRatio ? Number(slider.dataset.dragSpeedRatio) : 0.1;
+
+		const startFunc = e => {
+	
+			if(e.type === 'touchstart') {
+				startX = e.changedTouches[0].pageX;
+			} else {
+				e.preventDefault();
+				startX = e.pageX;
+			}
+
+		
+			slider.classList.add('is-drag');
+			isDown = true;
+
+			slider.style.cursor = 'grabbing';
+
+		
+			beforeX = 0;
+		}
+
+		const moveFunc = e => {
+		
+			if(!isDown) {
+				return;
+			}
+			e.preventDefault();
+
+
+			if(e.type === 'touchmove') {
+				moveX = startX - e.changedTouches[0].pageX;
+			} else {
+				moveX = startX - e.pageX;
+			}
+
+		
+			if(moveX < 0) {
+				isRightMove = true;
+			} else {
+				isRightMove = false;
+			}
+
+		
+			let changeAngle = (moveX - beforeX) * dragSpeedRatio;
+			for( let i = 0 ; i < itemsLen ; i ++ ) {
+				const elm = items[i];
+				elm.requestID = requestAnimationFrame(() => {
+					setPosition(elm,elm.angle - changeAngle);
+				});
+			}
+
+			
+			checkResetPosition();
+
+		
+			beforeX = moveX;
+
+			setWillChange();
+		}
+
+
+		const endFunc = e => {
+			if(e.type !== 'touchend') {
+				e.preventDefault();
+			}
+			
+			slider.classList.remove('is-drag');
+			isDown = false;
+
+			
+			slider.style.cursor = 'grab';
+
+
+		
+			const approximateAngle = [];
+			for( let i = 0 ; i < itemsLen ; i ++ ) {
+		
+				const elm = items[i];
+				const checkAngle = Math.abs(elm.angle/baseAngle);
+				if(checkAngle < 1 && checkAngle !== 0) {
+					approximateAngle.push(elm.angle);
+				}
+			}
+
+			if(approximateAngle.length > 0) {
+				const approximateAngleLeft = approximateAngle[0];
+				const approximateAngleRight = approximateAngle[1];
+
+				const isMoveSetPoint = Math.abs(moveX) > 40;
+				if(isRightMove && isMoveSetPoint) {
+					navMove(-approximateAngleLeft);
+					return;
+				}
+				if(!isRightMove && isMoveSetPoint) {
+					navMove(-approximateAngleRight);
+					return;
+				}
+
+				
+				if(Math.abs(approximateAngleLeft) > Math.abs(approximateAngleRight)) {
+					navMove(-approximateAngleRight);
+				} else {
+					navMove(-approximateAngleLeft);
+				}
+			}
+
+			removeWillChange();
+		}
+
+		slider.addEventListener('touchstart', startFunc);
+		slider.addEventListener('touchmove', moveFunc);
+		slider.addEventListener('touchend', endFunc);
+
+
+		slider.addEventListener('mouseenter', () => {
+		
+			slider.style.cursor = 'grab';
+		});
+		slider.addEventListener('mousedown', startFunc);
+		slider.addEventListener('mousemove', moveFunc);
+		slider.addEventListener('mouseup', endFunc);
+		slider.addEventListener('mouseleave', endFunc);
+
+
+	
+		const resizeObserver = new ResizeObserver(() => {
+	
+			getBaseVal();
+			for( let i = 0 ; i < itemsLen ; i ++ ) {
+				const elm = items[i];
+				elm.requestID = requestAnimationFrame(() => {
+					setPosition(elm,elm.angle);
+				});
+			}
+			setSliderHeight();
+		});
+		
+		resizeObserver.observe(slider);
+
+	});
+}
+angleSlider();
+</script>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+img{
+    height: 300px;
+}
+.js-angle-slider__prev{
+    padding: 8px 3px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: 7px;
+   
+
+}
+
+.js-angle-slider__next{
+    padding: 8px 3px;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
+    border-radius: 7px;
+
+}
+button{
+    margin: 6px;
+}
+button:hover{
+    background-color: #fff;
+    color: #000;
+    box-shadow: 2px 2px 5px #111;
+}
+
+  .js-angle-slider__body {
+    overflow: hidden;
+    position: relative;
+  }
+  .js-angle-slider__list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+  }
+  .js-angle-slider__list.is-initialized .js-angle-slider__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .js-angle-slider__list .js-angle-slider__item{
+    padding: 3px;
+    margin: 5px;
+    box-shadow: 2px 2px 8px #141313;
+  }
+  .js-angle-slider__item {
+    flex-shrink: 0;
+    width: calc( 195 / 375 * 100%);
+    padding: 0 calc( 20 / 375 * 100%);
+    box-sizing: border-box;
+    transform-origin: center bottom;
+  }
+
+  
+  @media  (max-width: 400px) {
+    div img{
+     max-width: 136px;
+     max-height: fit-content;
+    }
+  }
+  @media screen and (min-width: 640px) {
+    .js-angle-slider__item {
+      width: calc( 240 / 1440 * 100%);
+      padding: 0 calc( 20 / 1440 * 100%);
+      box-shadow: none;
+    }
+    
+  }
+  .js-angle-slider__item img {
+    height: auto;
+    width: 100%;
+    vertical-align: top;
+   
+  }
+  .js-angle-slider__pager {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .js-angle-slider__dots-list {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0 0;
+    padding: 0;
+    list-style: none;
+  }
+  .js-angle-slider__dots-item {
+    margin: 0 10px;
+  }
+  .js-angle-slider__dots-button {
+    height: 10px;
+    width: 10px;
+    padding: 0;
+    margin: 0;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    transition: background-color .4s;
+  }
+  .js-angle-slider__dots-button.is-active {
+    background-color: #000;
+  }
+  
+  
+  
+
+  body {
+    margin: 0;
+    padding: 50px 0 200vh;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 36px;
+  }
+  img {
+    height: auto;
+    width: 100%;
+    vertical-align: top;
+  }
+  p {
+    margin-bottom: 50px;
+    text-align: center;
+  }

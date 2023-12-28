@@ -1,0 +1,329 @@
+
+.intro1{
+    
+    max-width: 65vw;
+    margin: 2em auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(10, 10, 10, 0.753);
+}
+.intro2{
+    max-width: 65vw;
+    margin: 2em auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+  box-shadow: #000 1px 1px 4px;
+}
+.intro{
+    margin: 2.5vw 12.6vw;
+}
+
+.intro h2{
+    font-family: 'Gloriya';
+   background-color: #013e61;
+   color:#f1f1f1;
+   display: inline-block;
+   padding: 5px 3px;
+   margin-left: -18px;
+   top: 0;
+   margin-top: -4vw;
+   border-radius: 4px;
+   text-shadow: 0 0 0.8px #99abec;
+}
+
+.intro p{
+    font-family: 'Source Code Pro','monospace'; 
+    margin: 14px;
+    font-weight: 900;
+    color: #0c0101;
+    text-shadow: 0 0 2px #0c0202; 
+}
+
+  
+  .masthead {
+    padding: 6em 0;
+    background-image: url('https://as2.ftcdn.net/v2/jpg/05/90/45/35/1000_F_590453561_4yHzTwbILnsg6QYmUau0yxYM1CJzAuT9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top: solid 1.5em #29516a;
+    font-family: oswald, helvetica, sans-serif;
+    text-align: center;
+    color: #fffefe;
+  }
+  .masthead p{
+    color: #fffefe;
+    font-size: 30px;
+  }
+  
+  .masthead-intro {
+    margin-bottom: 0.1em;
+    font-family: "open sans", "helvetica", sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+  
+    color: #fffefe;
+
+  }
+  
+  .masthead-heading {
+    margin-top: -0.2em;
+    font-family: "oswald", "helvetica", sans-serif;
+    font-size: 6em;
+    letter-spacing: .03em;
+    text-shadow: 1px 1px .5px #000;
+  }
+  /*-------Body Section--------*/
+  
+  .aboutme-section,
+  .fewthings-section {
+    max-width: 38em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+    font-family: Oswald, helvetica, sans-serif;
+    color: #042f42;
+  }
+  
+  .fewthings-section > h2 {
+   
+    
+    font-size: 14pt;
+  }
+  
+  .aboutme-section > p,
+  .fewthings-section > p {
+    /*typography declarations*/
+    
+    font-family: open sans, helvetica, sans-serif;
+    font-size: 12pt;
+    font-weight: light;
+  }
+  
+  /*-----------------------links-----------------------*/
+  
+  
+  
+  
+  /* visited link */
+  a:visited {
+      color: #a6a4cb;
+    text-decoration: none;
+  }
+
+ 
+
+.skill{
+ margin: 10px;
+   height: 15px;
+   background-color:rgb(110, 98, 14) ; 
+   border-radius: 5px;
+   
+}
+.skillcontainer{
+    padding: 12px;
+    font-weight: 900;
+}
+.skillitem{
+    display: flex;
+    align-items: center;
+    font-family: 'Source Code Pro','monospace'; 
+    font-weight: 900;
+    font-size: 17px;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sec{
+    margin-top: 4%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.parent-skill {
+    width: 200px;
+    height: auto;
+}
+
+.skill {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    box-shadow: 6px 6px 13px #1c1e22, -6px -6px 13px #262a2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress {
+    width: 97%;
+    height: 97%;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+    background: linear-gradient(280deg, #1e2024, #23272b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-number {
+    font-family: 'Poppins', sans-serif;
+    color: #f9004d;
+    font-size: 2rem;
+}
+
+.title {
+    color: #003350;
+    display: block;
+    text-align: center;
+    margin-top: 14px;
+    font-weight: 900;
+}
+
+
+
+@media (max-width: 1200px) {
+   
+
+    .masthead {
+        padding: 4em 0;
+        
+      }
+    
+      .masthead-intro {
+        font-size: 1.5em;
+      }
+    
+      .masthead-heading {
+        font-size: 3em;
+      }
+     }
+
+    
+    
+@media (max-width: 1100px) {
+    .sec {
+        width: 90%;
+    }
+}
+
+
+   
+
+
+@media (max-width: 1000px) {
+
+    .masthead {
+        padding: 3em 0;
+      }
+    
+      .masthead-intro {
+        font-size: 1.2em;
+      }
+    
+      .masthead-heading {
+        font-size: 2.5em;
+      }
+    
+      
+
+    
+  
+}
+@media screen and (max-width: 800px) {
+
+   
+    .masthead {
+      padding: 2.5em 0;
+    }
+  
+    .masthead-intro {
+      font-size: 1em;
+    }
+  
+    .masthead-heading {
+      font-size: 2.2em;
+    }
+  }
+  @media (max-width: 768px) {
+    .sec {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .parent-skill {
+        width: 100%;
+    }
+
+    .skill {
+        margin-bottom: 20px;
+    }
+}
+  @media screen and (max-width: 600px) {
+    .masthead {
+      padding: 2em 0;
+    }
+  
+    .masthead-intro {
+      font-size: 0.6em;
+    }
+  
+    .masthead-heading {
+      font-size: 1.8em;
+    }
+
+  }
+  @media (min-width: 501px) and (max-width: 600px) {
+    .sec {
+        width: 80%;
+    }
+}
+  @media screen and (max-width: 500px) {
+  
+    .masthead {
+      padding: 1.5em 0;
+    }
+  
+    .masthead-intro {
+      font-size: 0.5em;
+    }
+  
+    .masthead-heading {
+      font-size: 1.5em;
+    }
+  }
+@media (max-width: 400px) {
+    .masthead {
+        padding: 1em 0;
+      }
+    
+      .masthead-intro {
+        font-size: 0.4em;
+      }
+    
+      .masthead-heading {
+        font-size: 1.2em;
+      }
+      .skill{
+        height: 130px;
+        width: 130px;
+      }
+    }
+   
+
+    
